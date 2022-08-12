@@ -1,0 +1,115 @@
+.section-panda {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 12rem;
+    padding-bottom: 20rem;
+    @media only screen and(max-width: 1400px) {
+        width: 70%;
+    }
+    @media only screen and(max-width: 768px) {
+        padding-top: 11rem;
+    }
+    @include media-query(phone) {
+        width: 90%;
+    }
+    &__pandapay {
+        span {
+            font-size: 1.3rem;
+        }
+        h1 {
+            font-weight: bolder;
+        }
+    }
+    &__credit {
+        box-shadow: 0 0 20px #ccc;
+        border-radius: .5rem;
+    }
+    &__credit,
+    &__for-top {
+        padding: .5rem 2rem;
+        line-height: 3;
+    }
+    &__for-top {
+        @media only screen and(max-width: 768px) {
+            display: none;
+        }
+    }
+    &__step-1 {
+        @include flex($justify: space-between, $align: center);
+        gap: 1rem;
+        padding: 2rem 1rem;
+        background-color: #EEF4FA;
+        box-shadow: 0 0 20px #ccc;
+        border-radius: .5rem;
+        @media only screen and(max-width: 768px) {
+            margin-top: 2rem;
+        }
+    }
+    &__file-image img {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+    }
+    &__balance {
+        flex-grow: 1;
+        font-size: 1.2rem;
+    }
+    &__payment {
+        padding: 2rem;
+        box-shadow: 0 0 20px #ccc;
+        border-radius: .5rem;
+        margin-top: 2rem;
+        @media only screen and(max-width: 768px) {
+            margin-top: 4rem;
+        }
+    }
+    &__pandapay-top {
+        width: 25rem;
+        @include flex($justify: space-between, $align: center);
+        @media only screen and(max-width: 768px) {
+            width: 100%;
+        }
+    }
+    &__payment-top {
+        display: flex;
+        gap: 1.5rem;
+        label {
+            width: 24rem;
+        }
+    }
+    &__top-up {
+        background-color: white;
+        color: black;
+        display: inline;
+        border-radius: 1.3rem;
+        padding: 0 .6rem;
+        padding-bottom: .3rem;
+        box-shadow: 0 0 10px #ccc;
+        span {
+            font-size: 1.2rem;
+            font-weight: lighter;
+        }
+    }
+    &__save-payment {
+        border: 1px solid $primary-color;
+        border-radius: .5rem;
+        padding: .8rem;
+        margin-top: 2rem;
+    }
+    &__save-payment {
+        @include flex($justify: space-between, $align: center);
+        p {
+            font-size: 1.2rem;
+        }
+        a {
+            font-size: 1.2rem;
+            font-weight: bolder;
+            color: $primary-color;
+        }
+    }
+    &__file-icon {
+        svg {
+            width: 6rem;
+        }
+    }
+}

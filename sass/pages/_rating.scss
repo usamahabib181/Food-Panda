@@ -1,0 +1,134 @@
+.section-rating {
+    width: 60%;
+    margin: 10rem auto;
+    box-shadow: 0 0 5rem #ccc;
+    padding: 2rem 3rem;
+    @include media-query(tab-port) {
+        width: 80%;
+    }
+    @include media-query(phone) {
+        width: 90%;
+        margin-top: 13rem;
+    }
+    &__heading {
+        text-align: center;
+        color: $primary-color;
+        font-weight: bolder;
+    }
+    &__note {
+        background-color: $primary-color;
+        padding: 1rem;
+        color: white;
+        border-radius: 1rem;
+        text-align: center;
+        font-weight: 700;
+    }
+    &__user-rating {
+        h3 {
+            width: 16rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+    }
+    &__food-heading-wrapper {
+        display: flex;
+        align-items: center;
+        padding: .7rem 0;
+        gap: 6rem;
+        @include media-query(phone) {
+            flex-direction: column;
+            gap: 0!important;
+            align-items: unset;
+        }
+    }
+    &__input {
+        display: flex;
+    }
+    &__input-fields {
+        input,
+        textarea {
+            padding: 1rem;
+            border: none;
+            box-shadow: 0 0 2rem rgba(204, 204, 204, 0.719);
+            font-size: 1.6rem;
+        }
+        label {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .get-started {
+            &:hover {
+                color: white;
+            }
+        }
+    }
+    &__coments {
+        .fa-star {
+            font-size: 1.2rem;
+        }
+    }
+    &__coments-user1 {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        transition: all .3s ease;
+        border: 2px solid $primary-color;
+        &:hover {
+            background-color: $primary-color;
+            color: white;
+        }
+    }
+    &__coments-username {
+        font-weight: bold;
+    }
+    &__coments-heading {
+        color: $primary-color;
+        font-weight: bolder;
+    }
+}
+
+//new css add for half stars
+.star {
+    font-size: x-large;
+    width: 20px;
+    display: inline-block;
+    color: gray;
+}
+
+.star:last-child {
+    margin-right: 0;
+}
+
+.star:before {
+    content: '\2605';
+}
+
+.star.on {
+    color: gold;
+}
+
+.star.half:after {
+    content: '\2605';
+    color: gold;
+    position: absolute;
+    margin-left: -20px;
+    width: 10.5px;
+    overflow: hidden;
+}
+
+.star.half-third:after {
+    content: '\2605';
+    color: gold;
+    position: absolute;
+    margin-left: -20px;
+    width: 11.5px;
+    overflow: hidden;
+}
+
+.star.firsthalf:after {
+    content: '\2605';
+    color: gold;
+    position: absolute;
+    margin-left: -20px;
+    width: 7px;
+    overflow: hidden;
+}

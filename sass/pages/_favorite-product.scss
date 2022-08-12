@@ -1,0 +1,11 @@
+.section-no-favorite-product {
+    padding: 6rem 0;
+    text-align: center;
+    line-height: 2;
+    &__wrapper-info {
+        padding: 2rem;
+        i {
+            color: $primary-color;
+        }
+    }
+}

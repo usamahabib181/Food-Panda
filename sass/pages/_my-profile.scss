@@ -1,0 +1,50 @@
+.section-form {
+    width: 100%;
+    position: relative;
+    padding-top: 10rem;
+    &__profile {
+        width: 100%;
+        max-width: 60rem;
+        margin: 0 auto;
+        @include media-query(phone) {
+            max-width: 100rem;
+            padding: 0 1rem;
+        }
+        .container {
+            max-width: 45rem;
+            @include media-query(phone) {
+                max-width: 100%;
+            }
+        }
+        .profile-input {
+            padding: 1rem 1rem;
+            border-radius: 0;
+            transition: 0;
+            font-size: 1.2rem;
+            &:focus {
+                border-color: black;
+                box-shadow: none;
+            }
+        }
+    }
+    &__profile-footer {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.section-voucher {
+    &__vouchers {
+        width: 100%;
+        max-width: 50rem;
+        margin: 0 auto;
+        color: #333;
+        font-size: 1.3rem;
+        @media only screen and(max-width: 500px) {
+            padding: 0 2rem;
+        }
+    }
+    &__vouchers p:last-child {
+        color: #707070;
+    }
+}

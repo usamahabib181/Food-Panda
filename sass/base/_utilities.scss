@@ -1,0 +1,35 @@
+.mt-50 {
+    margin-top: 5rem;
+    @include media-query(phone) {
+        margin-top: 1rem;
+    }
+}
+
+.popup {
+    background-color: #DF0F64;
+    padding: 10px 22px;
+    position: absolute;
+    bottom: -28px;
+    right: 2rem;
+    color: white;
+    border-radius: 5px 5px 5px 5px;
+    @include media-query(phone) {
+        bottom: -22px;
+        right: 1rem;
+    }
+    &::before {
+        content: "";
+        width: 1rem;
+        height: 1.2rem;
+        background-color: #DF0F64;
+        position: absolute;
+        transform: rotate( 134deg);
+        top: -0.4rem;
+        right: 4px;
+        z-index: -1;
+    }
+}
+
+.hidden {
+    display: none;
+}

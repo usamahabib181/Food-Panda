@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+<style>
+     :root {
+        --color__1: #2AB7CA;
+        --color__2: #FE4A49;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-size: 1.3em;
+        font-family: 'Fraunces', serif;
+        background: #FED766;
+    }
+    /* Contenedor principal de la aplicación */
+    
+    #container {
+        background: #F4F4F8;
+        color: #999;
+        width: 8rem;
+        /* border-radius: 25px; */
+        /* padding: 20px; */
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        text-align: center;
+    }
+    
+    .flexStyle {
+        display: flex;
+        justify-content: center;
+    }
+    
+    #numero {
+        font-size: 3em;
+        text-align: center;
+        user-select: none;
+        font-weight: bold;
+    }
+    
+    #boton1,
+    #boton2 {
+        padding: 9px 24px;
+        margin: 7px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: .4s;
+        color: #999;
+        background: #e0e0e0;
+    }
+    
+    #boton1:hover {
+        background: var(--color__1);
+        color: #fff;
+    }
+    
+    #boton2:hover {
+        background: var(--color__2);
+        color: #000;
+    }
+</style>
+
+<body>
+
+    <div id="container">
+        <div id="numero_1" class="numero">0</div>
+        <!-- 1st -->
+        <div class="flexStyle">
+            <button id="boton2" onclick="decrement(1)">
+            
+              <i class="fal fa-trash-alt"></i>
+            </button>
+            <button id="boton1" onclick="increment(1)">
+              <i class="fas fa-plus"></i>
+              </button>
+        </div>
+    </div>
+    <!-- 2nd -->
+    <div id="container">
+        <div id="numero_2" class="numero">0</div>
+        <div class="flexStyle">
+            <button id="boton2" onclick="decrement(2)">
+            
+              <i class="fal fa-trash-alt"></i>
+            </button>
+            <button id="boton1" onclick="increment(2)">
+              <i class="fas fa-plus"></i>
+              </button>
+        </div>
+    </div>
+    <!-- 3rd -->
+    <div id="container">
+        <div id="numero_3" class="numero">0</div>
+        <div class="flexStyle">
+            <button id="boton2" onclick="decrement(3)">
+            
+              <i class="fal fa-trash-alt"></i>
+            </button>
+            <button id="boton1" onclick="increment(3)">
+              <i class="fas fa-plus"></i>
+              </button>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+<script>
+    // Variables
+
+    const increment = (id) => {
+        document.getElementById(`numero_${id}`).innerText++;
+    }
+    const decrement = (id) => {
+        var ele = document.getElementById(`numero_${id}`);
+        if (ele.innerText >= 1) {
+            ele.innerText--
+        }
+    }
+    const removeAnimationClass = () => {
+        numero.classList.remove('animacion2', 'animacion');
+    }
+</script>
+
+</html>
+
+
+<!--  -->
+
+<div class="section-single-product__cart">
+    <div class="d-flex justify-content-center align-items-center p-5 " style="background-color: black;">
+        <img src="logos/logo.png" width="220" height="75" />
+    </div>
+    <div class="text-center mb-3"><br />
+        <span>Tran #: ABC234</span>
+    </div>
+    <h5 class="text-center fw-bold"> Deine Bestellung</h5>
+    <div class="section-single-product__order-detail " id="scrollCart">
+        <div class="p-4">
+            <h5 class="text-center fw-bold"> Pizza</h5>
+            <div class="d-flex justify-content-between">
+                <h5 class="fw-bold food-name">3x (101) Margeritta</h5>
+                <span>Familie</span>
+            </div>
+            <!--selected product in cart start -->
+            <div>
+                <div class="section-single-product__subtotal">
+                    <h5 class="fw-bold food-name" style="user-select: auto;">Channa Chaat</h5>
+                    <p class="price"><span>&euro;: <span id="price">8.5</span></span>
+                    </p>
+                </div>
+                <div class="qty" style="user-select: auto;">
+                    <span class="minus" style="user-select: auto;">-</span>
+                    <input type="number" class="count" name="qty" value="1" disabled="" style="user-select: auto;">
+                    <span class="plus" style="user-select: auto;">+</span>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+            <!-- selected product in cart end -->
+            <div>
+            </div>
+            <!-- <div class="qty">
+                <span class="bminus" name="bminus" id="bminus" value="1">-</span>
+                <input type="number " class="count form-check-input" name="qty " value="1" disabled>
+                <span class="bplus" name="bplus" id="bplus" value="1">+</span>
+            </div> -->
+            <!-- <div>
+                <p><i>comment ie. half/half</i></p>
+            </div> -->
+        </div>
+
+        <div class=" p-4">
+            <h5 class="text-center fw-bold"> Pizza</h5>
+            <div class="d-flex justify-content-between">
+                <h5 class="fw-bold food-name">3x (101) Margeritta</h5>
+                <span>Familie</span>
+            </div>
+
+            <div class="section-single-product__subtotal">
+                <p>Glutenfrei</p>
+                <p><span>&euro;: <span id="price">8.5</span></span>
+                </p>
+            </div>
+            <div>
+                <div class="p-4">
+                    <!--selected product in cart start -->
+                    <div>
+                        <div class="section-single-product__subtotal">
+                            <h5 class="fw-bold food-name" style="user-select: auto;">Channa Chaat</h5>
+                            <p class="price"><span>&euro;: <span id="price">8.5</span></span>
+                            </p>
+                        </div>
+                        <div class="qty" style="user-select: auto;">
+                            <span class="minus" style="user-select: auto;">-</span>
+                            <input type="number" class="count" name="qty" value="1" disabled="" style="user-select: auto;">
+                            <span class="plus" style="user-select: auto;">+</span>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                    <!-- selected product in cart end -->
+                </div>
+            </div>
+
+            <!-- <div class="qty">
+                <span class="bminus" name="bminus" id="bminus" value="1">-</span>
+                <input type="number " class="count " name="qty " value="1" disabled>
+                <span class="bplus" name="bplus" id="bplus" value="1">+</span>
+            </div> -->
+            <div>
+                <p><i>comment ie. half/half</i></p>
+            </div>
+        </div>
+        <div class="p-4">
+            <h5 class="text-center fw-bold"> empty </h5>
+            <div class="d-flex justify-content-between">
+                <h5 class="fw-bold food-name">Shopping cart is empty</h5>
+            </div>
+        </div>
+    </div>
+    <div class="section-single-product__total-amount">
+        <div class="section-single-product__subtotal">
+            <p>Subtotal</p>
+            <p>&euro; 53.2 </p>
+        </div>
+        <div class="section-single-product__subtotal">
+            <p>delivery charge</p>
+            <p>&euro; 1</p>
+        </div>
+        <div class="section-single-product__subtotal">
+            <b>Total</b>
+            <b>&euro; 54.2</b>
+        </div>
+        <form name="complete" id="complete" method="POST" action="checkout">
+            <input type="hidden" name="c_tran_token" id="c_tran_token" value="x" />
+            <input type="hidden" name="c_res_token" id="c_res_token" value="y" />
+            <button type="submit" name="checkout" id="checkout" class="btn-full-width bkg-primary">
+            GO TO CHECKOUT
+        </button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,400 @@
+.header {
+    width: 100%;
+    @include flex(space-between, center);
+    padding: 2rem;
+    background-color: $white-color;
+    position: fixed;
+    top: 0;
+    z-index: 3000;
+    box-shadow: 0 .2rem 1.6rem 0 rgba(0, 0, 0, 0.1);
+    @include media-query(phone) {
+        display: none;
+    }
+    @media only screen and (max-width: 354px) {
+        padding: 1rem .7rem;
+    }
+}
+
+.logo {
+    font-weight: 600;
+    color: $primary-color;
+}
+
+.options {
+    flex-basis: 18rem;
+    @include flex(end, center);
+}
+
+.login-icon {
+    width: 2rem;
+    height: 2rem;
+    background-color: $primary-color;
+    padding: .3rem .4rem;
+    text-align: center;
+    color: $white-color;
+    border-radius: 50%;
+}
+
+.shopping,
+.login-btn {
+    border-left: 1px solid #ebebeb;
+    padding: 1.7rem 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    @media only screen and (max-width: 340px) {
+        padding: 0 .5rem;
+    }
+}
+
+.english {
+    padding: 2rem 1rem;
+    border-left: 1px solid #ebebeb;
+}
+
+.shopping,
+.english,
+.login-btn {
+    color: $primary-color;
+    font-weight: bold;
+    a {
+        color: $primary-color;
+        font-size: 1.2rem;
+    }
+}
+
+.shopping {
+    position: relative;
+    i {
+        font-size: 2rem;
+    }
+    .shopping-counter {
+        background-color: $primary-color;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        right: .2rem;
+        top: 1.6rem;
+    }
+}
+
+.login-btn {
+    i {
+        font-size: 1rem;
+        padding-top: .5rem;
+    }
+}
+
+#navbar-phone {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background-color: $white-color;
+    position: fixed;
+    top: 0;
+    z-index: 3000;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .2rem 1.6rem 0 rgba(0, 0, 0, 0.1);
+    @include media-query(phone) {
+        opacity: 1;
+    }
+    .english,
+    .shopping,
+    .login-btn {
+        border-left: none;
+    }
+    .dropdown-toggle::after {
+        display: none;
+    }
+}
+
+///////////////////
+.header-with-serach-bar {
+    width: 100%;
+    @include flex(space-between, center);
+    padding: 0rem 2rem;
+    background-color: $white-color;
+    position: fixed;
+    top: 0;
+    z-index: 3000;
+    box-shadow: 0 .2rem 1.6rem 0 rgba(0, 0, 0, 0.1);
+    @include media-query(phone) {
+        padding: 1rem 2rem;
+        display: none;
+    }
+    @media only screen and(max-width:400px) {
+        padding: 1rem 0rem;
+    }
+    &__dropdown {
+        flex-grow: 1;
+        position: relative;
+        padding: 2rem 0;
+        border-left: 1px solid #ebebeb;
+        // border-right: 1px solid #ebebeb;
+        @include media-query(phone) {
+            display: none;
+        }
+    }
+    &__When {
+        width: 20%;
+        padding: 2rem 1rem;
+        @include media-query(phone) {
+            display: none;
+        }
+    }
+    &__button {
+        width: 100%;
+        text-align: start;
+    }
+    &__drop-box {
+        width: 100%;
+    }
+    &__location-button {
+        padding: 0rem 3rem;
+        background-color: $primary-color;
+    }
+    &__phone {
+        display: none;
+        @include media-query(phone) {
+            display: block;
+            margin-top: 8rem;
+            padding: 3rem;
+        }
+    }
+    &__button {
+        @include media-query(phone) {
+            font-size: 1.5rem;
+        }
+    }
+    .show-on-phone {
+        display: none;
+        @include media-query(phone) {
+            display: block;
+        }
+    }
+    &__When-phone {
+        @include media-query(phone) {
+            flex-grow: 1;
+        }
+    }
+}
+
+.box-flex {
+    // padding: 1.6rem 0.5rem;
+    padding: 2rem 1rem;
+    border-left: 1px solid #ebebeb
+}
+
+.english {
+    @media only screen and(max-width: 768px) {
+        display: none;
+    }
+}
+
+.option,
+.box-flex,
+.shopping,
+.english,
+.login-btn {
+    @media only screen and(max-width: 768px) {
+        border: none;
+    }
+}
+
+//////headder for map
+.header-for-map-page {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: none;
+    z-index: 20000;
+    padding: 1rem 0;
+    background-color: $white-color;
+    box-shadow: 0 .5rem 2rem #f4f4f4;
+    @include media-query(phone) {
+        display: block;
+    }
+    @media only screen and(max-width:340px) {
+        padding: 2rem 0;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .dropdown-toggle::after {
+        display: none;
+    }
+}
+
+/////////////////////notification model
+
+/* The Modal (background) */
+
+
+/* The Modal (background) */
+
+.modal-notication {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 99999;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.notification-modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    @include media-query(tab-land) {
+        width: 40%;
+    }
+    @include media-query(phone) {
+        width: 80%;
+    }
+}
+
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+
+/* The Close Button */
+
+.notification-close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.notification-close:hover,
+.notification-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.notification-modal-header {
+    padding: 10px 16px;
+    background-color: $primary-color;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.notification-modal-body {
+    padding: 2px 16px;
+    // &>*:nth-child(4n) {
+    //     color: transparent;
+    //     border-bottom: 2px solid $primary-color;
+    // }
+    small {
+        font-size: 1.5rem;
+        color: $primary-color;
+    }
+    .model-body-item:not(:last-child) {
+        border-bottom: 2px solid $primary-color;
+        margin-bottom: 1rem;
+    }
+}
+
+.notification-modal-footer {
+    padding: 2px 16px;
+    background-color: $primary-color;
+    color: white;
+}
+
+.notification-modal-footer {
+    h3 {
+        font-weight: bolder;
+        padding: .5rem 0;
+    }
+}
+
+///////////
+.logout-modal {
+    padding: 3rem;
+    .modal-dialog {
+        top: 8rem;
+    }
+    .modal-content {
+        padding: 1rem;
+    }
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .modal-title {
+            font-size: 3rem;
+        }
+    }
+    .modal-footer {
+        flex-wrap: nowrap;
+        button {
+            padding: 1.8rem 0;
+            font-weight: bolder;
+            font-size: 1.7rem;
+        }
+        .btn-logout {
+            background-color: $primary-color;
+            color: white;
+        }
+    }
+}

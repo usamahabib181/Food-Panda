@@ -1,0 +1,87 @@
+.section-login {
+    width: 100%;
+    position: relative;
+    &__box {
+        width: 100%;
+        max-width: 40rem;
+        // background-color: red;
+        margin-top: 40rem;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        @include absCenter;
+        @media only screen and (max-width: 993px) {
+            max-width: 50rem;
+        }
+        @include media-query(phone) {
+            margin-top: 30rem;
+        }
+    }
+    &__box-header {
+        // background-color: rebeccapurple;
+        padding: 4rem 0 0rem 3rem;
+        color: #333;
+    }
+    &__options {
+        // background-color: green;
+        @include flex($justify: center, $align: center);
+        flex-direction: column;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 2rem 1rem;
+    }
+    &__to-apple {
+        width: 90%;
+        position: relative;
+        @include flex($justify: space-between, $align: center);
+        .apple {
+            @include icon-alignment;
+        }
+    }
+    &__to-google {
+        width: 90%;
+        position: relative;
+        .google {
+            @include icon-alignment;
+        }
+    }
+    &__to-facebook {
+        width: 90%;
+        position: relative;
+        .facebook {
+            @include icon-alignment;
+        }
+    }
+    &__term-policy {
+        width: 90%;
+        span {
+            font-size: 1rem;
+        }
+        a {
+            color: $primary-color;
+        }
+    }
+    &__to-or {
+        width: 90%;
+    }
+    &__to-email {
+        width: 90%;
+    }
+}
+
+@include media-query(phone) {
+    .header-alignment {
+        // justify-content: center;
+        .logo-alignment {
+            flex-grow: 1;
+            text-align: center;
+        }
+        .english-alignmnet {
+            display: none;
+        }
+        .option-alignment {
+            flex-basis: 0rem;
+        }
+        .shopping-alignment {
+            border: none;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.section-popular-restaurants {
+    width: 100%;
+    &__wrapper {
+        width: 70%;
+        margin: 0 auto;
+        padding: 6rem 0;
+        @include media-query(tab-land) {
+            width: 90%;
+        }
+        @media only screen and(max-width:946px) {
+            width: 92%;
+        }
+    }
+    &__heading {
+        padding: 2rem 2.4rem;
+    }
+    &__discount-bagde {
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        .off-price,
+        .voucher {
+            background-color: $primary-color;
+            margin-bottom: 1rem;
+            color: $white-color;
+            font-weight: bolder;
+            font-size: 1.3rem;
+            padding: .2rem 1.3rem;
+            display: block;
+        }
+        .off-price {
+            display: inline-block;
+        }
+    }
+    &__details {
+        .catagorie {
+            color: #333;
+            font-weight: bolder;
+            @media only screen and(max-width: 660px) {
+                font-size: 2rem;
+            }
+        }
+        .more-products {
+            font-weight: lighter;
+            color: #707070;
+            @media only screen and(max-width: 660px) {
+                font-size: 2rem;
+            }
+        }
+        .rating {
+            p {
+                font-size: 1rem;
+                @media only screen and(max-width: 660px) {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+        .stars {
+            color: #276FBF;
+            // font-size: inherit;
+            font-size: 1rem;
+        }
+    }
+}

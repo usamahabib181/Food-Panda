@@ -1,0 +1,408 @@
+  .section-orderfood {
+      width: 100%;
+      padding: 6.3rem 0;
+      @include media-query(phone) {
+          padding: 0;
+      }
+      &__wrapper {
+          gap: 2rem;
+      }
+      &__tabs {
+          width: 70%;
+          margin: 0 auto;
+          padding: 2rem 0;
+          @include media-query(tab-land) {
+              width: 90%;
+          }
+      }
+      &__items-1 {
+          background: url(../img/restaurant-near-you/pickup.png);
+      }
+      &__items-2 {
+          background: url(../img/restaurant-near-you/pickup.png);
+      }
+      &__items-3 {
+          background: url(../img/restaurant-near-you/pickup.png);
+      }
+      &__items-1,
+      &__items-2,
+      &__items-3 {
+          background-color: #E2E2E2;
+          width: 20rem;
+          height: 5rem;
+          background-image: url(../img/restaurant-near-you/pickup.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: right;
+          @media only screen and(max-width: 958px) {
+              background-image: none;
+              background-color: #ffff;
+          }
+      }
+      &__img-wrapper-1,
+      &__img-wrapper-2,
+      &__img-wrapper-3 {
+          width: 20rem;
+          height: 5rem;
+      }
+      .filters-search-wrapper {
+          position: relative;
+      }
+      .exclusive-filters-bar {
+          height: 64px;
+          display: flex;
+          align-content: center;
+          background-color: white;
+          position: relative;
+          width: 100%;
+          font-size: 12px;
+          box-shadow: 0.5px 0px 10px lightgray
+      }
+      .restaurants-search-wrapper {
+          transition: width .3s cubic-bezier(.25, .46, .45, .94);
+          border: none;
+          width: 100%;
+          flex: 1;
+      }
+      .restaurants-search {
+          display: inline-flex;
+          align-items: center;
+          padding: 0;
+          background-color: white;
+          color: $primary-color;
+          font-size: 12px;
+          font-weight: 300;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          cursor: pointer;
+          width: 100%;
+          height: 100%;
+      }
+      .search-icon {
+          display: inline-flex;
+          vertical-align: text-bottom;
+          min-width: 24px;
+          margin: 0 20px;
+          fill: $primary-color;
+      }
+      .restaurants-search-input {
+          caret-color: $primary-color;
+          display: inline-block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 100%;
+          border: none;
+          padding: 1.5rem 0;
+          font-size: 1.3rem;
+          &:focus {
+              outline: none;
+          }
+      }
+      .restaurants-search .search-clear {
+          color: $primary-color;
+          border: none;
+          background: transparent;
+          flex-shrink: 0;
+      }
+      .restaurants-search .search-clear {
+          padding: 0 20px;
+          display: flex;
+          align-items: center;
+          height: 100%;
+      }
+      .filters-search-wrapper .exclusive-filters-bar .restaurants-filters-wrapper {
+          overflow: hidden;
+      }
+      .filters-search-wrapper .exclusive-filters-bar .restaurants-filters-wrapper {
+          display: flex;
+          align-items: center;
+          height: 64px;
+          min-width: 64px;
+          border-left: 1px solid #f8e0e8;
+      }
+      .filters-button {
+          display: flex;
+          align-items: center;
+          flex-basis: 100%;
+          cursor: pointer;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding: 24px;
+          background-color: white;
+          color: $primary-color;
+          font-size: 12px;
+          font-weight: 300;
+          border: none;
+      }
+      .filters-button .filters-icon {
+          display: inline-flex;
+          margin-right: 8px;
+          flex: 0 1 auto;
+          fill: $primary-color;
+      }
+      svg:not(:root) {
+          overflow: hidden;
+      }
+      &__colum {
+          @media only screen and(max-width: 958px) {
+              width: 100%;
+          }
+      }
+      .filters-button .filters-text {
+          flex: 1 1 auto;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-transform: uppercase;
+          font-size: 1.4rem;
+          font-weight: 300;
+          margin-right: 16px;
+      }
+      .filters-button .filters-arrow {
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          align-items: center;
+          display: flex;
+      }
+      .filters-button .filters-arrow svg {
+          transform: rotate( 90deg);
+          stroke: $primary-color;
+      }
+      .owl-theme .owl-nav {
+          margin-top: 10px;
+          position: absolute;
+          width: 107%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          justify-content: end;
+          font-size: 3rem;
+          z-index: -1;
+          overflow: visible;
+      }
+      .filter-dropdown {
+          background-color: #fff;
+          box-shadow: 0.5px 0px 10px lightgrey;
+          color: #333333;
+          font-size: 1rem;
+          position: absolute;
+          top: 0;
+          z-index: 1000;
+          display: none;
+          .form-check-input:checked {
+              background-color: $primary-color;
+              border-color: $primary-color;
+          }
+          .form-check-input:focus {
+              box-shadow: 0 0 0 0 $primary-color;
+          }
+          .filter-dropdown-header {
+              @include flex($justify: space-between, $align: center);
+              padding: 1.6rem 1rem;
+              border-bottom: 1px solid #B1B1B1;
+              box-shadow: 0.5px 0px 10px lightgrey;
+              height: 64px
+          }
+          .filter-icon {
+              @include flex($justify: start, $align: center);
+          }
+          .filter-arrow {
+              padding-right: 1.4rem;
+              font-size: 1.2rem;
+              cursor: pointer;
+          }
+          .filter-body {
+              padding: 2rem;
+              max-height: 40rem;
+              overflow-y: scroll;
+              .form-check-input {
+                  width: 2rem!important;
+                  height: 2rem!important;
+              }
+              .form-check {
+                  @include flex($justify: start, $align: center);
+                  gap: 1rem;
+                  max-width: 18rem;
+                  min-width: 15rem;
+              }
+              .checked {
+                  color: orange;
+              }
+          }
+          .sort,
+          .offer,
+          .cuisnes {}
+          .filter-body-radio-btn {
+              @include flex($justify: start, $align: center);
+              flex-wrap: wrap;
+              gap: 2rem;
+          }
+          .filter-bugdet {
+              @include flex($justify: start, $align: center);
+              gap: 2rem;
+          }
+          .filter-bugdet-btn {
+              border: 1px solid $primary-color;
+              padding: .5rem 0;
+              text-align: center;
+              flex-grow: 1;
+          }
+      }
+      .filter-dropdown-show {
+          display: block;
+      }
+      .search-suggestion-overlay {
+          position: fixed;
+          display: none;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.25);
+          cursor: pointer;
+          overflow: hidden;
+          z-index: 2;
+      }
+      .owl-carousel .owl-nav button.owl-next {
+          background-color: $primary-color;
+          padding: 0.1rem 1rem .5rem 1rem!important;
+          color: white;
+          @media only screen and(max-width: 768px) {
+              display: none;
+          }
+      }
+      .owl-carousel .owl-nav button.owl-prev {
+          display: none;
+      }
+      .owl-theme .owl-nav [class*=owl-] {
+          border-radius: 0;
+      }
+      &__banners-timing {
+          background-color: white;
+          color: black;
+          position: absolute;
+          right: 0;
+          top: 0;
+          padding: .5rem 1rem;
+          text-align: center;
+          font-size: 1rem;
+          p {
+              font-size: 1.5rem;
+          }
+      }
+      &__ancher {
+          text-decoration: none;
+      }
+      &__new-product {
+          padding: 4rem 0;
+      }
+      &__celebration-deal {
+          width: 21rem;
+          @include media-query(phone) {
+              width: 100%;
+          }
+      }
+      &__poster {
+          width: 100%;
+          img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+          }
+      }
+      &__all-restaurent-flex {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          row-gap: 3rem;
+          column-gap: 2rem;
+          background-color: greenyellow;
+          @media only screen and(max-width: 1514px) {
+              //   justify-content: ss;
+          }
+          @media only screen and(max-width: 1342px) {
+              justify-content: start;
+          }
+      }
+      &__restaurant {
+          width: 25rem;
+          position: relative;
+          @media only screen and(max-width: 1514px) {
+              width: 22rem;
+          }
+          @media only screen and(max-width: 1342px) {
+              width: 20rem;
+          }
+      }
+      &__show-image {
+          width: 25rem;
+          @media only screen and(max-width: 1514px) {
+              width: 22rem;
+          }
+          @media only screen and(max-width: 1342px) {
+              width: 20rem;
+          }
+          img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+          }
+      }
+      &__celebration-deal {
+          position: relative;
+      }
+      &__explore-restaurant {
+          width: 100%;
+          height: 13rem;
+          position: relative;
+          margin-top: 2rem;
+          .map-image {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: .6rem;
+          }
+      }
+      &__explore-restaurant-text {
+          position: absolute;
+          bottom: 2rem;
+          left: 2rem;
+      }
+      &__takeaway-image {
+          width: 100%;
+          .takeaway-img {
+              width: 35rem;
+              height: 12rem;
+              object-fit: cover;
+          }
+      }
+      &__poster {
+          overflow: hidden;
+          position: relative;
+          img {
+              transition: all .5s;
+              &:hover {
+                  transform: scale(1.1);
+              }
+          }
+          .favorites-icon {
+              position: absolute;
+              bottom: .4rem;
+              right: .4rem;
+              border-radius: 50%;
+              padding: .5rem;
+              display: flex;
+              align-items: center;
+              path {
+                  fill: $primary-color;
+              }
+          }
+      }
+  }

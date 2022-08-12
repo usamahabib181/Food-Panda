@@ -1,0 +1,465 @@
+.section-single-product {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    &__product-details {
+        width: 80%;
+        @media only screen and(max-width: 1100px) {
+            width: 70%;
+        }
+        @media only screen and(max-width: 980px) {
+            width: 100%;
+        }
+    }
+    &__top-notification {
+        background-color: #F7F1E3;
+        display: flex;
+        align-items: flex-end;
+        padding: .6rem 3rem;
+        margin-top: 1rem;
+        .notice {
+            font-size: 1.2rem;
+            text-align: center;
+            flex-grow: 1;
+            color: #434241;
+        }
+    }
+    &__icon {
+        align-self: flex-end;
+    }
+    &__cover-image {
+        width: 100%;
+        height: 30rem;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__cover-details {
+        width: 100%;
+        background-color: $white-color;
+        border-bottom: 1px solid #EBEBEB;
+    }
+    &__cover-details-wrapper {
+        width: 75%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 1.7rem 0;
+        @include media-query(phone) {
+            width: 90%;
+        }
+    }
+    &__name-rating {
+        .restaurant-name {
+            margin-bottom: 1rem;
+        }
+        .offer-products {
+            font-size: 1.3rem;
+            color: #707070;
+            span {
+                margin-right: 1rem;
+            }
+        }
+    }
+    &__rating {
+        display: flex;
+        align-items: center;
+        .rating-value {
+            i {
+                color: blueviolet;
+                font-size: 1/3rem;
+            }
+            p {
+                color: #707070;
+            }
+        }
+        .infortant-bagde {
+            background-color: $primary-color;
+            color: white;
+            font-weight: bolder;
+            font-size: 1.1rem;
+        }
+    }
+    &__restaurant-info {
+        color: #707070;
+        i {
+            display: none;
+            @include media-query(phone) {
+                display: block;
+                font-size: 4rem;
+                margin-right: 2rem;
+            }
+        }
+        p {
+            @include media-query(phone) {
+                display: none;
+            }
+        }
+    }
+    &__celebration-deals {
+        background-color: #F8F8F8;
+    }
+    &__deals-navbar {
+        background-color: white;
+    }
+    &__deals-navbar-wrapper {
+        border-bottom: 1px solid #EBEBEB;
+        border-top: 1px solid #EBEBEB;
+        width: 100%;
+        @include flex($justify: space-between, $align: center);
+        padding: 1rem 16rem;
+        position: sticky;
+        top: 0;
+        background-color: #FFFF;
+        z-index: 100;
+        @media only screen and(max-width: 1100px) {
+            padding: 1rem 4rem 1rem 11rem;
+        }
+        @media only screen and(max-width: 980px) {
+            padding: 2rem;
+            overflow-x: scroll;
+            width: 1000px;
+            margin: auto;
+        }
+    }
+    .wrapper {
+        width: 100%;
+        overflow-x: auto;
+        position: sticky;
+        top: 6.4rem;
+        z-index: 1000;
+    }
+    &__deals-navbar-wrapper {
+        .owl-carousel,
+        .owl-dots {
+            display: none;
+        }
+        .owl-carousel,
+        .owl-nav {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 50;
+            right: 2rem;
+            top: 50%;
+            transform: translate(0, -50%);
+            font-size: 3rem;
+            .owl-prev {
+                display: none;
+            }
+        }
+    }
+    &__links {
+        a {
+            color: #333333;
+            margin-right: 1.5rem;
+            font-size: 1.1rem;
+            padding: 1rem 0;
+            display: block;
+            border-bottom: 2px solid transparent;
+            transition: all .4s;
+            font-weight: light;
+            &:hover {
+                border-bottom: 2px solid $primary-color;
+            }
+        }
+    }
+    &__direction {
+        margin-left: auto;
+        @media only screen and(max-width: 980px) {
+            display: none;
+        }
+    }
+    &__empty {
+        width: 100%;
+        background-color: #ECECEC;
+        height: 1.5rem;
+    }
+    &__popular-deals-wrapper {
+        width: 75%;
+        margin: 0 auto;
+        padding: 3rem 0;
+        @include media-query(phone) {
+            width: 90%;
+        }
+        .title {
+            margin-bottom: 1rem;
+            i {
+                font-size: 2rem;
+                color: $primary-color;
+                margin-right: .5rem;
+            }
+        }
+    }
+    &__product {
+        width: 48%;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 0.8px 16px #3333;
+        @media only screen and(max-width: 1100px) {
+            width: 100%;
+        }
+    }
+    &__image {
+        position: relative;
+        width: 8rem;
+        height: 8rem;
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .image-plus {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: $primary-color;
+            padding: .4rem;
+            border: 1px solid $white-color;
+            width: 1.9rem;
+        }
+    }
+    &__cart {
+        width: 20%;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        box-shadow: 0 0 40px #ccc;
+        @media only screen and(max-width: 1100px) {
+            width: 30%;
+        }
+        @media only screen and(max-width: 980px) {
+            display: none;
+        }
+        .food-name {
+            color: $primary-color;
+        }
+        .price {
+            font-weight: lighter;
+        }
+        input {
+            border: 0;
+            width: 2%;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+    .qty {
+        @include flex($justify: end, $align: center)
+    }
+    .qty {
+        justify-content: start!important;
+        .count {
+            background: none;
+            border: none;
+            width: 3rem;
+            text-align: end;
+        }
+    }
+    .plus,
+    .minus {
+        padding: 9px 15px;
+        margin: 7px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: .4s;
+        background-color: #EFEFEF;
+        &:hover {
+            background-color: $primary-color;
+            color: white;
+        }
+    }
+    &__label {
+        font-size: 1.4rem;
+        font-weight: lighter;
+    }
+    &__total-amount {
+        padding-top: 2rem;
+        border-top: 2px solid #9A9A9A;
+        padding: 1rem 1.4rem;
+    }
+    &__order-detail {
+        max-height: 30rem;
+        min-height: 20rem;
+        overflow-y: scroll;
+        .price {
+            font-size: 1rem;
+        }
+        .extra-items {
+            p {
+                font-weight: bold;
+            }
+        }
+        .form-floating {
+            .form-control:focus {
+                border-color: $primary-color;
+                box-shadow: none;
+            }
+        }
+    }
+    &__subtotal {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        .price {
+            font-size: 1.3rem;
+        }
+    }
+    &__view-cart {
+        width: 100%;
+        background-color: $primary-color;
+        position: fixed;
+        bottom: 0;
+        display: none;
+        @media only screen and(max-width: 980px) {
+            display: block;
+        }
+    }
+    &__view-cart-wrapper {
+        @include flex($justify: space-between, $align: center);
+        padding: 2rem;
+        color: $white-color;
+    }
+    &__product-img {
+        width: 100%;
+        height: 25rem;
+        @include media-query(phone) {
+            height: auto;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__product-model {
+        max-height: 50rem;
+        min-height: 53rem;
+        margin-top: 11rem;
+        @include media-query(phone) {
+            margin-top: 15rem;
+        }
+        // .product-header {
+        //     position: absolute;
+        //     z-index: 1;
+        //     right: 12px;
+        //     top: 3px;
+        // }
+        .product-body {
+            padding: 0;
+            .form-check-input:checked {
+                background-color: $primary-color!important;
+                border-color: none!important;
+            }
+            .form-check-input:focus {
+                box-shadow: none;
+            }
+        }
+        /* width */
+         ::-webkit-scrollbar {
+            width: .5rem;
+        }
+        /* Track */
+         ::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+        /* Handle */
+         ::-webkit-scrollbar-thumb {
+            background-color: $primary-color;
+        }
+        /* Handle on hover */
+         ::-webkit-scrollbar-thumb:hover {
+            background-color: #333;
+        }
+    }
+}
+
+// 
+.checkbox-wrapper {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    .choose-your-flavour {
+        width: 10rem;
+        .form-check-input:checked {
+            border: none!important;
+        }
+    }
+}
+
+.radio-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    .form-check {
+        width: 10rem;
+        margin-bottom: 0!important;
+        @media (max-width: 400px) {
+            width: 8rem;
+        }
+    }
+    .form-check-input:checked {
+        border: none!important;
+    }
+}
+
+.select-box-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-img-wrapper {
+    display: flex;
+    padding: 1rem;
+    gap: 2rem;
+    border-bottom: 1px solid #EBEBEB;
+    border-top: 1px solid #EBEBEB;
+}
+
+// new counter css
+#counter-wrapper {
+    color: #999;
+    width: 15rem;
+    text-align: center;
+    margin-left: auto;
+}
+
+.flexStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#numero {
+    font-size: 3em;
+    text-align: center!important;
+    user-select: none;
+    font-weight: bold;
+}
+
+#boton1,
+#boton2 {
+    padding: 9px 24px;
+    margin: 7px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .4s;
+}
+
+#boton1:hover {
+    background: $primary-color;
+    color: #fff;
+}
+
+#boton2:hover {
+    background: $primary-color;
+    color: white;
+}

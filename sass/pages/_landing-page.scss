@@ -1,0 +1,482 @@
+.section-hero {
+    width: 100%;
+    height: 80vh;
+    padding-top: 5rem;
+    position: relative;
+    overflow: hidden;
+    @include media-query(tab-port) {
+        height: 50vh;
+        padding: 20rem 0;
+    }
+    .hero {
+        width: 50.2%;
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        @include media-query(tab-land) {
+            width: 51%;
+            left: 40%;
+        }
+        @include media-query(tab-port) {
+            width: 90%;
+            top: 60%;
+            left: 50%;
+        }
+        @media only screen and (min-height: 70rem) {
+            top: 60%;
+        }
+    }
+    &__heading {
+        max-width: 83rem;
+        min-width: 40rem;
+        padding: 1rem;
+        font-weight: 300;
+        p {
+            font-size: 3.5rem;
+            color: #333;
+        }
+    }
+    &__search-bar {
+        display: flex;
+        gap: 1rem;
+        background-color: $white-color;
+        padding: 1.8rem 1rem;
+        box-shadow: 0 .2rem 1.6rem 0 rgba(0, 0, 0, 0.3);
+        @media only screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+        input {
+            height: 5rem;
+            flex-grow: 1;
+            border: 1px solid #ebebeb;
+            &::placeholder {
+                padding-left: 1rem;
+            }
+        }
+    }
+    &__oder {
+        display: flex;
+        gap: .6rem;
+        span {
+            align-self: center;
+        }
+        button {
+            height: 5rem;
+            @media only screen and (max-width: 768px) {
+                flex-grow: 1;
+            }
+        }
+    }
+    &__bg-img {
+        height: 100%;
+        position: absolute;
+        right: -45rem;
+        bottom: -1rem;
+        @media only screen and (max-width: 768px) {
+            flex-grow: 1;
+            right: -55rem;
+        }
+        @include media-query(phone) {
+            right: -65rem;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.bg-text {
+    width: 100%;
+    position: relative;
+    &::before {
+        @include beforeelemnets;
+    }
+}
+
+.section-started {
+    width: 100%;
+    height: 60vh;
+    margin-top: 3rem;
+    color: #707070;
+    background: url(../img/landing-page/home-vendor-pk.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 2000;
+    &__get-started {
+        max-width: 60rem;
+        background-color: $white-color;
+        position: absolute;
+        bottom: -7rem;
+        left: 20rem;
+        padding: 3rem 2rem;
+        font-size: 1.6rem;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        @media only screen and (max-width: 768px) {
+            left: 50%;
+            width: 90%;
+            bottom: -23rem;
+            transform: translate(-50%, -50%);
+            margin: 0 auto;
+        }
+    }
+    &__heading {
+        font-size: 1.9rem;
+        font-weight: bolder;
+    }
+    &__mono-gram {
+        max-width: 60rem;
+        position: absolute;
+        color: #707070;
+        top: -5rem;
+        left: 22rem;
+        font-size: 2.5rem;
+        font-weight: lighter;
+        @media only screen and (max-width: 1000px) {
+            display: none;
+        }
+    }
+}
+
+.section-cities {
+    width: 100%;
+    height: auto;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    &__grid {
+        width: 100%;
+        padding-top: 23rem;
+    }
+    &__list {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        gap: 2rem;
+        @include media-query(tab-land) {
+            width: 88%;
+        }
+        @include media-query(tab-port) {
+            width: 95%;
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+        }
+        li {
+            overflow: hidden;
+            @include media-query(tab-port) {
+                overflow: visible;
+            }
+        }
+        &::before {
+            content: "Cities";
+            font-size: 14rem;
+            color: #F5F5F5;
+            display: block;
+            font-weight: bolder;
+            position: absolute;
+            top: -14rem;
+            left: 4.5rem;
+            @include media-query(tab-land) {
+                left: 8rem;
+            }
+            @media only screen and (max-width: 1000px) {
+                display: none;
+            }
+        }
+    }
+    &__wrapper {
+        width: 20rem;
+        height: 23rem;
+        position: relative;
+        overflow: hidden;
+        transition: all .3s;
+        @include media-query(tab-land) {
+            width: 25rem;
+        }
+        &:hover,
+        &__image {
+            transform: scale(1.1);
+            @media only screen and(max-width: 992px) {
+                transform: none;
+            }
+        }
+    }
+    &__info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 8rem;
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__name {
+        position: absolute;
+        bottom: -.5rem;
+        left: 1rem;
+        z-index: 1;
+        font-size: 2rem;
+        font-weight: bolder;
+        line-height: 1;
+        color: #fff;
+        margin: 1.6rem;
+    }
+    &__firstletter {
+        display: block;
+        width: 13rem;
+        height: 10rem;
+        font-size: 18rem;
+        font-weight: bolder;
+        line-height: .52em;
+        color: #d70f62c0;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 2.2rem;
+        left: 0.9rem;
+        opacity: 0;
+        transition: opacity 300ms;
+        margin-left: -17px;
+        @media only screen and(max-width: 992px) {
+            opacity: 1;
+        }
+        @media only screen and(min-width: 992px) {
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    &__call-to-action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 48px;
+        height: 48px;
+        background: #d70f62f1;
+        border: none;
+        color: $white-color;
+        transition: opacity 300ms;
+    }
+}
+
+.section-app {
+    width: 100%;
+    position: relative;
+    padding-bottom: 6rem;
+    @include media-query(tab-land) {
+        overflow: hidden;
+    }
+    &__heading {
+        position: absolute;
+        top: -3rem;
+        left: 14rem;
+        color: #333;
+        font-weight: lighter;
+        font-size: 1.9rem;
+    }
+    &__banner {
+        margin-top: 20rem;
+        height: 25rem;
+        background-color: #d70f62de;
+        display: flex;
+        align-items: center;
+        position: relative;
+        @media only screen and (max-width: 768px) {
+            height: auto;
+        }
+        &:before {
+            content: "App";
+            font-size: 18rem;
+            color: #F5F5F5;
+            display: block;
+            font-weight: bolder;
+            position: absolute;
+            top: -18rem;
+            left: 10rem;
+            z-index: -1;
+            @include media-query(tab-land) {
+                left: 8rem;
+            }
+            @media only screen and (max-width: 1000px) {
+                display: none;
+            }
+        }
+    }
+    &__wrapper {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white-color;
+        @include flex($justify: center, $align: center);
+        @media only screen and (max-width: 768px) {
+            flex-direction: column-reverse;
+        }
+    }
+    &__right {
+        width: 40%;
+        @media only screen and (max-width: 768px) {
+            width: 80%;
+            margin-top: -14rem;
+            align-self: end;
+        }
+        @media only screen and (max-width: 474px) {
+            align-self: flex-start;
+        }
+    }
+    &__left {
+        width: 40%;
+        h2 {
+            font-size: 2rem;
+        }
+        @media only screen and (max-width: 768px) {
+            width: 80%;
+            font-size: 2rem;
+            padding: 2rem 0;
+        }
+    }
+    &__image {
+        width: 50rem;
+        height: 40rem;
+    }
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.office {
+    width: 100%;
+    height: 47vh;
+    margin-top: 6rem;
+    background: url(../img/landing-page/home-corporate-pk.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 2100;
+    &::before {
+        content: "Office";
+        font-size: 14rem;
+        color: #F5F5F5;
+        display: block;
+        font-weight: bolder;
+        position: absolute;
+        top: -14rem;
+        left: 4.5rem;
+        z-index: 0;
+        @include media-query(tab-land) {
+            left: 8rem;
+        }
+        @media only screen and (max-width: 1000px) {
+            display: none;
+        }
+    }
+    .box {
+        max-width: 50rem;
+    }
+}
+
+.section-content {
+    padding-top: 11rem;
+    line-height: 2;
+    &__details {
+        width: 75%;
+        margin: 0 auto;
+        color: #333;
+        @include media-query(phone) {
+            width: 90%;
+        }
+        p,
+        li {
+            font-weight: light;
+        }
+        h2 {
+            font-size: 2.2rem;
+        }
+    }
+    &__socail-icon {
+        color: #C2C2C2;
+        padding: 4rem 0;
+        @include flex($justify: space-between, $align: center)
+    }
+    &__copyright {
+        color: black;
+        padding: 3rem 0;
+        @include flex($justify: space-between, $align: center);
+        @media only screen and (max-width: 854px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    &__heading {
+        width: 50%;
+        h4 {
+            font-size: 1.3rem;
+        }
+    }
+    &__links {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: end;
+        @media only screen and (max-width: 854px) {
+            text-align: center;
+            width: 100%;
+        }
+        a {
+            font-size: 1.2rem;
+            color: #686868;
+            margin: 0 .4rem;
+        }
+    }
+    &__empty {
+        padding: 3rem 0;
+        border-bottom: 1px solid #fedede;
+    }
+    &__location {
+        padding: 1rem 0;
+        a {
+            color: #686868;
+            font-size: 1.4rem;
+        }
+    }
+    &__shops-details {
+        margin: 0 auto;
+        padding: 2rem 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 2rem;
+        font-size: 1.2rem;
+        border-bottom: 1px solid #fedede;
+        @media only screen and(max-width: 768px) {
+            justify-content: center;
+        }
+    }
+    &__shops-details-1 {
+        min-width: 30rem;
+        @media only screen and(max-width: 768px) {
+            grid-column: 2/ 3;
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        a {
+            color: #333;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}

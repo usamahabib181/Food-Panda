@@ -1,0 +1,39 @@
+.section-thankyou {
+    margin-top: 13rem;
+    width: 70%;
+    margin: 13rem auto 0 auto;
+    background: $primary-color;
+    color: white;
+    padding: 4rem;
+    @include media-query(phone) {
+        width: 90%;
+    }
+    a {
+        display: inline-block;
+        color: rgb(108, 238, 22);
+        &:hover {
+            color: white;
+        }
+    }
+    &__message {
+        p {
+            font-size: 2.5rem;
+            font-weight: bold;
+            padding: 3rem;
+            text-align: center;
+            @include media-query(phone) {
+                padding: 0rem;
+            }
+        }
+    }
+    &__btns {
+        gap: 2rem;
+        margin-top: 2rem;
+        @include flex($justify: center, $align: center);
+        a {
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}

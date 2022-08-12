@@ -1,0 +1,46 @@
+.section-track {
+    width: 70%;
+    margin: 8rem auto;
+    background-color: #fff;
+    box-shadow: 0 0 5rem #ccc;
+    @media (max-width: 745px) {
+        width: 90%;
+        margin: 13rem auto;
+    }
+    &__order-heading {
+        background-color: $primary-color;
+        padding: 1rem 1rem 1rem;
+        color: white;
+    }
+    &__order-information {
+        padding: 2rem 4rem;
+    }
+    &__order-information-item {
+        display: flex;
+        @include media-query(phone) {
+            flex-direction: column;
+        }
+    }
+    &__order-information-item-heading {
+        width: 19rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    &__order-information-item-detail {
+        font-size: 1.5rem;
+        font-weight: light;
+    }
+    &__order-information-product-from {
+        ul {
+            padding: 1.5rem 6rem;
+            @include media-query(phone) {
+                padding: 3.5rem 0rem;
+            }
+        }
+        ul li {
+            list-style-type: square;
+            font-size: 1.5rem;
+            margin-bottom: .8rem;
+        }
+    }
+}

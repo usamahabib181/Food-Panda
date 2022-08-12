@@ -1,0 +1,59 @@
+.section-my-order {
+    padding-top: 6rem;
+    width: 66%;
+    margin: 0 auto;
+    @include media-query(phone) {
+        width: 80%;
+        padding-top: 8rem;
+    }
+    &__wrapper {
+        width: 40%;
+        margin: 0 auto;
+        padding-bottom: 5rem;
+        color: #333333;
+        @media only screen and(max-width: 1500px) {
+            width: 60%;
+        }
+        @media only screen and(max-width: 1000px) {
+            width: 80%;
+        }
+        @media only screen and(max-width: 768px) {
+            width: 100%;
+        }
+        @include media-query(phone) {
+            padding-bottom: 2rem;
+        }
+    }
+    &__heading {
+        padding-top: 5rem;
+    }
+    &__past-order {
+        padding-top: .7rem;
+    }
+    &__restaurant {
+        @include flex($justify: space-between, $align: center);
+        padding-top: 2rem;
+    }
+    &__price {
+        color: #707070;
+        p {
+            font-size: 1.3rem;
+        }
+    }
+    &__delivery-by-panda {
+        @include flex($justify: space-between, $align: center);
+    }
+    &__price,
+    &__delivery-by-panda,
+    &__product-detail,
+    &__date {
+        span,
+        p {
+            color: #707070;
+            font-size: 1.3rem;
+        }
+    }
+    .section-form__profile-footer {
+        width: 100%;
+    }
+}

@@ -1,0 +1,91 @@
+.section-giftcard {
+    width: 70%;
+    margin: 12rem auto 0 auto;
+    padding: 2rem;
+    border-radius: .5rem;
+    @media only screen and (max-width: 1400px) {
+        width: 90%;
+    }
+    @include media-query(tab-port) {
+        width: 100%;
+    }
+    &__top-buttons {
+        a {
+            display: inline-block;
+        }
+    }
+    &__bottom-buttons {
+        display: flex;
+        justify-content: space-between;
+        a {
+            display: inline-block;
+        }
+    }
+    &__heading {
+        padding: 1rem .5rem;
+    }
+    &__cards {
+        margin-top: 2rem;
+        display: flex;
+        gap: 2rem;
+        @media only screen and (max-width: 768px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    &__cards-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #45525b;
+        width: 40rem;
+        color: #e6eff6;
+        padding: 2rem 0rem;
+        border-radius: 2rem;
+        box-shadow: 0 0 1rem #45525b;
+        @include media-query(phone) {
+            width: 100%;
+        }
+    }
+    &__card-img-over-img {
+        width: 48%;
+        height: 12rem;
+        padding: 1rem;
+        @include media-query(phone) {
+            height: 15rem;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__card-info {
+        text-align: center;
+        padding: 5rem 1rem;
+        border-left: 2px solid #e6eff6;
+        width: 50%;
+    }
+    &__name {
+        font-weight: 800;
+    }
+    &__gift-code {}
+    &__oder-wrapper {
+        padding: 3rem 0;
+        display: flex;
+        justify-content: center;
+    }
+    &__oder-btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    // for all <a> hover
+    a {
+        display: inline-block;
+        border-radius: .8rem;
+        &:hover {
+            color: white;
+        }
+    }
+}

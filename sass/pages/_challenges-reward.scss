@@ -1,0 +1,349 @@
+.section-navtab {
+    margin-top: 6rem;
+    @include media-query(phone) {
+        margin-top: 9rem;
+    }
+    &__bar {
+        justify-content: center;
+        padding-top: 1rem;
+        box-shadow: 0 0 20px #ccc;
+        @include media-query(tab-land) {
+            padding-top: 1rem;
+        }
+    }
+    &__content-1 {
+        width: 100%;
+        height: 100%;
+        background-size: 300pt auto;
+        background: url(../img/challenges/content-1-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 2rem 0;
+        position: relative;
+    }
+    &__challenge-banner {
+        width: 70%;
+        margin: 0 auto;
+        @include flex($justify: center, $align: center);
+        @include media-query(phone) {
+            width: 100%;
+        }
+    }
+    &__challenge {
+        background-color: $primary-color;
+        padding: 1.4rem 1.9rem;
+        border-radius: .4rem;
+        h1 {
+            font-size: 2rem;
+            font-weight: bolder;
+            color: $white-color;
+        }
+    }
+    &__arrow {
+        content: " ";
+        align-self: center;
+        width: 0;
+        height: 0;
+        border-left: 12px solid $primary-color;
+        border-bottom: 8px solid transparent;
+        border-right: 0 solid transparent;
+        border-top: 8px solid transparent;
+    }
+    &__image {
+        width: 8rem;
+    }
+    &__point-star {
+        width: 78%;
+        display: inline;
+        display: flex;
+        margin: auto;
+        position: relative;
+        span {
+            background-color: $primary-color;
+            width: 2.5rem;
+            height: 2.5rem;
+            text-align: center;
+            border-radius: 50%;
+            position: absolute;
+            left: 0rem;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .star {
+            fill: $primary-color;
+            padding-bottom: 1rem;
+        }
+        p {
+            background-color: $white-color;
+            color: $primary-color;
+            font-weight: bold;
+            padding: 1rem 2rem;
+            border-radius: .5rem;
+            box-shadow: 0 0 20px #ccc;
+        }
+    }
+    &__grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, 308px);
+        gap: 24px 8px;
+        align-content: flex-start;
+        justify-content: center;
+        padding: 3rem 0;
+        @include media-query(phone) {
+            display: flex;
+            max-width: 100%;
+            overflow-x: scroll;
+        }
+    }
+    &__item {
+        height: 230px;
+        flex: 0 0 277px;
+        margin: 8px;
+        scroll-snap-align: center;
+        border-radius: 4px;
+        background-color: white;
+        p {
+            color: black;
+        }
+        .box-flex {
+            padding: 0;
+        }
+    }
+    &__challenge-item {
+        background-image: url(../img/challenges/item-bg.png);
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position-y: -16px;
+        background-size: 100%;
+        border-radius: 4px;
+    }
+    &__item-1 {
+        display: block;
+        position: relative;
+        top: -24px;
+        margin: 0 auto;
+        height: 124px;
+        width: 124px;
+        overflow-y: visible;
+    }
+    &__challenge-disc {
+        font-size: 1.6rem;
+        font-weight: 700;
+        padding: 0 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 3em;
+        margin-top: -8px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .challenge-progress-bar {
+        width: 100%;
+        display: flex;
+        padding: .8rem 0;
+    }
+    .challenge-progress-bar .cell-filler.action-complete {
+        background-color: #1f4d5d;
+    }
+    .challenge-progress-bar .cell {
+        height: 4px;
+        flex: 1;
+        border-radius: 2px;
+        margin: 2px;
+        overflow: hidden;
+    }
+    .challenge-item .additional-info {
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: green;
+        padding: 8px 16px;
+        @include flex($justify: space-between, $align: center);
+    }
+    .challenge-item .additional-info .points {
+        display: flex;
+    }
+    .additional-info {
+        display: flex;
+        justify-content: space-between;
+    }
+    .info-icon {
+        display: flex;
+        align-items: center;
+    }
+    .info-icon .graphic {
+        padding: 4px 4px 0 0;
+        position: relative;
+        top: -0.15em;
+    }
+    .challenge-item .additional-info .countdown {
+        display: flex;
+    }
+    .singal-line-img,
+    &__bg-landscape {
+        width: 100%;
+        height: 1.5rem;
+        background-image: url(../img/challenges/single-landscape-1.png);
+        background-size: auto 100%;
+    }
+    &__how-its-works {
+        width: 100%;
+        background-color: $primary-color;
+        img {
+            width: 5rem;
+        }
+    }
+    &__wrapper {
+        width: 60%;
+        display: flex;
+        gap: 2rem;
+        margin: 0 auto;
+        padding: 6rem 0;
+        @media only screen and(max-width: 786px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    &__title {
+        flex-grow: 1;
+        h3 {
+            font-weight: bolder;
+            color: white;
+        }
+    }
+    &__notice {
+        text-align: center;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: lighter;
+    }
+    &__banner-bagdes {
+        background-color: $primary-color;
+        color: $white-color;
+    }
+    &__banner-row {
+        width: 60%;
+        margin: 0 auto;
+        @include flex($justify: center, $align: center);
+        @include media-query(tab-port) {
+            width: 100%;
+        }
+    }
+    &__banner-image {
+        width: 20rem;
+    }
+    &__collect-bagdes {
+        max-width: 100%;
+        height: 100%;
+        height: 100%;
+        background-size: 300pt auto;
+        background: url(../img/challenges/content-1-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    &__grid-2 {
+        max-width: 100rem;
+        margin: 0 auto;
+        padding: 24px;
+        display: grid;
+        gap: 24px 24px;
+        grid-template-columns: repeat(auto-fit, 190px);
+        justify-content: center;
+    }
+    &__grid-item-2 {
+        width: 188px;
+        height: 228px;
+        background-color: $white-color;
+        box-shadow: 0 0 180px #ccc;
+        padding: 16px;
+        display: block;
+        border-radius: 4px;
+        text-decoration: none;
+        color: inherit;
+        text-align: center;
+        transition: all .3s;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+    &__img-wrapper {
+        display: block;
+        margin: 0 auto;
+        max-width: 124px;
+        max-height: 124px;
+        .badge-img {
+            max-width: 100%;
+        }
+        .name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+    .order {
+        background-color: #EBEBEB;
+        text-align: center;
+        border-radius: 50%;
+        width: 6rem;
+        height: 6rem;
+        padding-top: .7rem;
+        span {
+            font-size: 1.1rem;
+            color: $primary-color;
+            text-align: center;
+            font-weight: bolder;
+        }
+    }
+    .badge-alignment {
+        @include media-query (phone) {
+            text-align: center;
+        }
+    }
+    &__content-3 {
+        .container {
+            width: 90%;
+        }
+        .content-3-row {
+            @media only screen and(max-width: 992px) {
+                text-align: center;
+            }
+        }
+        .content-3-col {
+            @media only screen and(max-width: 992px) {
+                margin-top: 2rem;
+            }
+        }
+        h1 {
+            font-weight: bolder;
+        }
+        p {
+            font-size: 1.7rem;
+            font-weight: lighter;
+        }
+    }
+    .reward-img {
+        width: 40rem;
+    }
+    .download-img-link {
+        @include flex($justify: flex-start, $align: center);
+        gap: .8rem;
+        @media only screen and(max-width: 992px) {
+            justify-content: center;
+        }
+        &__wrapper {
+            width: 13rem;
+            height: 4rem;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: .8rem;
+            }
+        }
+    }
+}
